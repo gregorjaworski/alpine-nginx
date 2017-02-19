@@ -14,8 +14,6 @@ RUN chown -R www:www /var/lib/nginx
 RUN chown -R www:www /www
 
 # Change of default configuration
-RUN mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
-RUN rm /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # copy sefault page
