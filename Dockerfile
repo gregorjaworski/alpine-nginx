@@ -26,4 +26,4 @@ COPY run.sh run.sh
 #set default port
 EXPOSE 80 443 22
 
-CMD ['run.sh']
+CMD ["run.sh"]
