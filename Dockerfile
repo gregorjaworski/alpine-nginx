@@ -20,11 +20,13 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY index.html /www/index.html
 COPY index.php /www/index.php
 
-# run nginx 
-RUN rc-service nginx start
+# add runing scriopts
+COPY run.sh run.sh
 
 #set default port
-EXPOSE 80
+EXPOSE 80 443 22
 
 # rm instalations & old files 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD ['run.sh]
