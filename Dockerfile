@@ -21,7 +21,7 @@ COPY index.html /www/index.html
 COPY index.php /www/index.php
 
 # run nginx 
-rc-service nginx start
+RUN rc-service nginx start
 
 #set default port
 EXPOSE 80
