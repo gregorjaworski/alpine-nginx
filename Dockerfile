@@ -2,6 +2,7 @@ FROM alpine
 MAINTAINER grzegorjaworski  <webmstr@grzegorzjaworski.de>
 
 # Installation of Nginx
+RUN apk update
 RUN apk add nginx
 
 # Create web-user
