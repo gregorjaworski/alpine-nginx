@@ -26,7 +26,4 @@ COPY run.sh run.sh
 #set default port
 EXPOSE 80 443 22
 
-# rm instalations & old files 
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 CMD ['run.sh]
